@@ -1,13 +1,11 @@
 # Jackett, OpenVPN and WireGuard, JackettVPN
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV XDG_DATA_HOME="/config" \
 XDG_CONFIG_HOME="/config"
 
 WORKDIR /opt
-
-RUN usermod -u 99 nobody
 
 # Make directories
 RUN mkdir -p /blackhole /config/Jackett /etc/jackett
