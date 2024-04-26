@@ -40,7 +40,7 @@ RUN apt update \
     iptables \
     jq \
     kmod \
-    libicu67 \
+    libicu72 \
     moreutils \
     net-tools \
     openresolv \
