@@ -4,6 +4,7 @@ FROM debian:bookworm-slim
 ENV DEBIAN_FRONTEND noninteractive
 ENV XDG_DATA_HOME="/config" \
 XDG_CONFIG_HOME="/config"
+ARG APP=expressvpn_3.68.0.2-1_amd64.deb
 
 WORKDIR /opt
 
@@ -46,6 +47,9 @@ RUN apt update \
     openresolv \
     openvpn \
     procps \
+    && wget -q "https://www.expressvpn.works/clients/linux/${EXVPN}" -O /tmp/${EXVPN} \
+    && dpkg -i /tmp/${EXVPN} \
+    && rm -rf /tmp/*.deb 
     && apt-get clean \
     && apt autoremove -y \
     && rm -rf \
