@@ -2,6 +2,9 @@
 # Forked from binhex's OpenVPN dockers
 set -e
 
+echo "[INFO] Start ExpressVPN"
+service expressvpn restart
+
 # check for presence of network interface docker0
 check_network=$(ifconfig | grep docker0 || true)
 
