@@ -39,6 +39,7 @@ RUN apt update \
     inetutils-ping \
     ipcalc \
     iptables \
+    iproute2 \
     jq \
     kmod \
     libicu72 \
@@ -48,6 +49,7 @@ RUN apt update \
     openvpn \
     procps \
     wget \
+    expect \
     && wget -q "https://www.expressvpn.works/clients/linux/expressvpn_3.68.0.2-1_amd64.deb" -O expressvpn_amd64.deb \
     && dpkg -i expressvpn_amd64.deb \
     && rm -rf expressvpn_amd64.deb \
