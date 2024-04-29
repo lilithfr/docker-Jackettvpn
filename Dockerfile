@@ -48,9 +48,9 @@ RUN apt update \
     openvpn \
     procps \
     wget \
-    && wget -q "https://www.expressvpn.works/clients/linux/${EXVPN}" -O /tmp/${EXVPN} \
-    && dpkg -i /tmp/${EXVPN} \
-    && rm -rf /tmp/*.deb \
+    && wget -q "https://www.expressvpn.works/clients/linux/expressvpn_3.68.0.2-1_amd64.deb" -O expressvpn_amd64.deb \
+    && dpkg -i expressvpn_amd64.deb \
+    && rm -rf expressvpn_amd64.deb \
     && apt-get clean \
     && apt autoremove -y \
     && rm -rf \
