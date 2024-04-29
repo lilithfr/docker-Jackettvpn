@@ -1,5 +1,5 @@
 # Jackett, OpenVPN and WireGuard, JackettVPN
-FROM debian:bookworm-slim
+FROM debian:bookworm
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV XDG_DATA_HOME="/config" \
