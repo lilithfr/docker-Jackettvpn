@@ -6,7 +6,7 @@ echo "[INFO] Start ExpressVPN"
 service expressvpn restart
 
 echo "[INFO] Activate ExpressVPN"
-/usr/bin/expect /tmp/expressvpnActivate.sh
+/usr/bin/expect /etc/openvpn/expressvpnActivate.sh
 
 echo "[INFO] Lock Traffic"
 expressvpn preferences set network_lock on
