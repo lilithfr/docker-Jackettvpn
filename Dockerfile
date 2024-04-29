@@ -49,7 +49,7 @@ RUN apt update \
     procps \
     && wget -q "https://www.expressvpn.works/clients/linux/${EXVPN}" -O /tmp/${EXVPN} \
     && dpkg -i /tmp/${EXVPN} \
-    && rm -rf /tmp/*.deb 
+    && rm -rf /tmp/*.deb \
     && apt-get clean \
     && apt autoremove -y \
     && rm -rf \
