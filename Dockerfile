@@ -47,6 +47,7 @@ RUN apt update \
     openresolv \
     openvpn \
     procps \
+    wget \
     && wget -q "https://www.expressvpn.works/clients/linux/${EXVPN}" -O /tmp/${EXVPN} \
     && dpkg -i /tmp/${EXVPN} \
     && rm -rf /tmp/*.deb \
