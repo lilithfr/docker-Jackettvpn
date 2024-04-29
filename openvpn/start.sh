@@ -5,6 +5,12 @@ set -e
 echo "[INFO] Start ExpressVPN"
 service expressvpn restart
 
+echo "[INFO] Activate ExpressVPN"
+/usr/bin/expect /tmp/expressvpnActivate.sh
+
+echo "[INFO] Lock Traffic"
+expressvpn preferences set network_lock on
+
 # check for presence of network interface docker0
 check_network=$(ifconfig | grep docker0 || true)
 
